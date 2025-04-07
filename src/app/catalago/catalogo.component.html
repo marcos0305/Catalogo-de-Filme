@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Catálogo de Filmes</h1>
+
+  <!-- BUSCAR O NOME DO FILME -->
+  <div class="adicionar-container search-container">
+    <input
+      type="text"
+      [(ngModel)]="query"
+      (keyup.enter)="buscarFilmes()"
+      placeholder="Digite o nome do filme"
+    >
+    <i class="fas fa-search search-icon" (click)="buscarFilmes()"></i>
+  </div>
+
+  <!-- EXIBE AS SUGESTÕES -->
+  <ul *ngIf="sugestoes.length > 0">
+    <li *ngFor="let filme of sugestoes">
+      {{ filme.titulo }}
+      <span *ngIf="filme.duracao"> - {{ filme.duracao }} min</span>
+      <span *ngIf="filme.classificacao"> (Classificação: {{ filme.classificacao }})</span>
+    </li>
+  </ul>
+
+  <!-- ADICIONAR FILME -->
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="novoFilme"
+      placeholder="Digite o nome do filme"
+      (keyup.enter)="addFilme()"
+    >
+    <button (click)="addFilme()">Adicionar filme</button>
+  </div>
+</div>

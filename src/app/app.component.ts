@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { CatalogoComponent } from "./catalago/catalogo.component";
+
 
 @Component({
-  selector: 'app-root',
+  selector: 'root-app',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [FormsModule, CommonModule, CatalogoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'front-end';
+
 }
