@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-admin-filme-form',
-  standalone: true,
-  imports: [CommonModule, FormsModule, ],
-  templateUrl: './admin-filme-form.component.html',
-  styleUrls: ['./admin-filme-form.component.css']
+    selector: 'app-admin-filme-form',
+    imports: [CommonModule, FormsModule,],
+    templateUrl: './admin-filme-form.component.html',
+    styleUrls: ['./admin-filme-form.component.css']
 })
 export class AdminFilmeFormComponent implements OnInit {
   FilmeService: any;

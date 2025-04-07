@@ -5,11 +5,10 @@ import { FilmeService } from '../shared/filme.service';
 import { Filme } from '../shared/filme.model';
 
 @Component({
-  selector: 'app-catalogo',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './catalogo.component.html',
-  styleUrls: ['./catalogo.component.css']
+    selector: 'app-catalogo',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './catalogo.component.html',
+    styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
   catalogoFilmes: Filme[] = [];

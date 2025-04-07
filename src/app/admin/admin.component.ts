@@ -4,11 +4,10 @@ import { AdminFilmeFormComponent } from "./admin-filme-form/admin-filme-form.com
 
 
 @Component({
-  selector: 'app-admin',
-  standalone: true,
-  imports: [CommonModule, AdminFilmeFormComponent],
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+    selector: 'app-admin',
+    imports: [CommonModule, AdminFilmeFormComponent],
+    templateUrl: './admin.component.html',
+    styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
 
