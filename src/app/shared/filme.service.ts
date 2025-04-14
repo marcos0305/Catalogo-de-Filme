@@ -5,7 +5,7 @@ import { Filme } from './filme.model'; // Importe a interface
   providedIn: 'root'
 })
 export class FilmeService {
-  private filmes: Filme[] = [
+  public filmes: Filme[] = [
     { titulo: 'O poderoso Chefão', sinopse: 'Um clássico sobre a máfia italiana.', elenco: 'Marlon Brando, Al Pacino', diretor: 'Francis Ford Coppola', duracao: '175', classificacao: '16' },
     { titulo: 'O Senhor dos Aneis', sinopse: 'Uma jornada épica na Terra Média.', elenco: 'Elijah Wood, Ian McKellen', diretor: 'Peter Jackson', duracao: '178', classificacao: '12' },
     { titulo: 'Matrix', sinopse: 'Um hacker descobre a verdade sobre a realidade.', elenco: 'Keanu Reeves, Laurence Fishburne', diretor: 'Lana Wachowski, Lilly Wachowski', duracao: '136', classificacao: '14' },

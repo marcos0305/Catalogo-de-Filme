@@ -1,24 +1,19 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routes';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AdminModule } from './admin/admin.module';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
-  declarations: [],
+  declarations: [
 
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CommonModule,
     FormsModule,
-    AdminModule
+    AppRoutingModule,
   ],
-  providers:[],
-  bootstrap:[]
+  providers: [],
+  bootstrap: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { };
-
+export class AppModule {}

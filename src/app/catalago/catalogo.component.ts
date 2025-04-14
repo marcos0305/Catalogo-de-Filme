@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FilmeService } from '../shared/filme.service';
 import { Filme } from '../shared/filme.model';
+import { Router } from 'express';
 
 @Component({
     selector: 'app-catalogo',
@@ -17,9 +18,11 @@ export class CatalogoComponent {
   sugestoes: Filme[] = []; // Corrigido para Filme[]
   mostrarLista: boolean = false;
 
-  constructor(private filmeService: FilmeService) {
-    this.catalogoFilmes = this.filmeService.getFilmes();
-  }
+  constructor(private filmeService: FilmeService, private router: Router) {}
+
+ngOnInit(): void{
+  this.catalogoFilmes = this.filmeService.getFilmes();
+}
 
   buscarFilmes(): void {
     if (this.query.trim().length > 0) {
@@ -28,21 +31,6 @@ export class CatalogoComponent {
       );
     } else {
       this.sugestoes = [];
-    }
-  }
-
-  addFilme(): void {
-    if (this.novoFilme.trim() !== '') {
-      this.filmeService.addFilme({
-        titulo: this.novoFilme,
-        sinopse: '',
-        elenco: '',
-        diretor: '',
-        duracao: '',
-        classificacao: ''
-      });
-      this.novoFilme = '';
-      this.catalogoFilmes = this.filmeService.getFilmes();
     }
   }
 

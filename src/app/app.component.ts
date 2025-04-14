@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { CatalogoComponent } from "./catalago/catalogo.component";
-
 
 @Component({
     selector: 'root-app',
-    imports: [FormsModule, CommonModule, CatalogoComponent],
+    standalone: true,
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  title = 'crud-angular';
 }

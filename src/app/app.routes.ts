@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatalogoComponent } from './catalago/catalogo.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -14,9 +15,7 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./catalago/catalogo.module').then((m) => m.CatalogoModule),
   },
-
-  {path:'',component:CatalogoComponent},
-  {path:'', component: AdminComponent}
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

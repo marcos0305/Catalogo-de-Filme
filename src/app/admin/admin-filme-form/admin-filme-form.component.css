@@ -1,28 +1,41 @@
-.filme-form {
+.admin-form {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-.filme-form label {
+.admin-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-form div {
+  margin-bottom: 15px;
+}
+
+.admin-form label {
   display: block;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.filme-form input,
-.filme-form textarea {
+.admin-form input,
+.admin-form textarea {
   width: 100%;
   padding: 8px;
-  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.filme-form button {
-  margin-top: 20px;
-  padding: 10px 20px;
+.admin-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.admin-form button {
+  width: 100%;
+  padding: 10px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -30,6 +43,6 @@
   cursor: pointer;
 }
 
-.filme-form button:hover {
+.admin-form button:hover {
   background-color: #0056b3;
 }
